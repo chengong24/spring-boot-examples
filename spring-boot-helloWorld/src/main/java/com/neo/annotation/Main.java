@@ -21,7 +21,7 @@ public class Main {
                     try {
                         methodAnnotation = (MethodAnnotation) methodInfo.getAnnotationInfo(MethodAnnotation.class.getName()).loadClassAndInstantiate();
                     } catch (Exception e) {
-                        System.out.println(e.getMessage());
+//                        System.out.println(e.getMessage());
                     }
                     if (methodAnnotation != null) {
                         System.out.println(methodAnnotation.a());
