@@ -16,7 +16,7 @@ public class CglibLearn {
         }
         void say1()
         {
-            System.out.println("say");
+            System.out.println("say1");
         }
 
         @Override

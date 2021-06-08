@@ -2,6 +2,7 @@ package com.neo.fanxing;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -14,9 +15,10 @@ public class Test<T> {
     public static void main(String[] args) {
 //        test1();
 //        test2();
-        Test<Long> longTest = new Test<>(19L);
-        Long serializable = (Long)longTest.test3();
-        System.out.println(serializable);
+//        Test<Long> longTest = new Test<>(19L);
+//        Long serializable = (Long)longTest.test3();
+//        System.out.println(serializable);
+        test4();
     }
 
     public Test(T key) { //泛型构造方法形参key的类型也为T，T的类型由外部指定
@@ -57,5 +59,15 @@ public class Test<T> {
         }
         return (T) currentBusinessDimension;
     }
+
+
+    public static void test4(){
+        HashMap<String, String> map = new HashMap<>();
+        map.put("hello", "hello");
+        map.put("world", "world");
+        System.out.println(map.get("hello"));
+        System.out.println(map.get("world"));
+    }
+
 
 }

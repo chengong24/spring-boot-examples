@@ -1,0 +1,4 @@
+server:
+  port: ${MODULE_PORT:8080}
+custom:
+  name: custom name

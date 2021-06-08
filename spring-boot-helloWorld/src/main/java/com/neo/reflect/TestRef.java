@@ -13,9 +13,9 @@ public class TestRef {
 
     public static void main(String args[]) throws NoSuchMethodException, IllegalAccessException, InvocationTargetException {
         Foo foo = new Foo("这个一个Foo对象！");
-        Class clazz = foo.getClass();
-        Method getInfo = clazz.getDeclaredMethod("getInfo", Info.class,String.class);
-        getInfo.invoke(foo, new Info("ddd"),"dfdfd");
+        Class<?> clazz = foo.getClass();
+        Method method = clazz.getDeclaredMethod("getInfo", Info.class,String.class);
+        method.invoke(foo, new Info("ddd"),"dfdfd");
     }
 }
 
